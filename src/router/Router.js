@@ -24,7 +24,8 @@ const Router = () => {
   return (
     <NavigationContainer>
       {/* <PublicRoutes /> */}
-      <LoginScreen />
+      {/* <LoginScreen /> */}
+      <SignupScreen />
     </NavigationContainer>
   );
 };

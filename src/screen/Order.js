@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import FeaturedItems from '../components/Items/FeaturedItems';
 import {number} from 'yup';
+import ChineseItems from '../components/Items/ChineseItems';
 
 const Order = () => {
   return (
@@ -33,11 +34,10 @@ const Order = () => {
             <Text style={styles.orderText}>Order It Lounge</Text>
             <Text style={styles.number}>347 234 2343</Text>
           </View>
-
+          {/* hr Line */}
           <View style={styles.hrCont}>
             <View style={styles.hrLine}></View>
           </View>
-
           {/* Featured items */}
           <View>
             <Text style={styles.fiText}>Featured items</Text>
@@ -50,16 +50,21 @@ const Order = () => {
               <FeaturedItems />
             </ScrollView>
           </View>
-          {/* Featured items */}
+          {/* hr Line */}
+          <View style={styles.hrCont}>
+            <View style={styles.hrLine}></View>
+          </View>
+          {/* Chinese  */}
           <View>
-            <Text>Chinese</Text>
-            <View>
-              <Text>item-1</Text>
-              <Text>item-2</Text>
-              <Text>item-3</Text>
-              <Text>item-4</Text>
-              <Text>item-5</Text>
-            </View>
+            <Text style={styles.chText}>Chinese</Text>
+            <ScrollView style={styles.chineseItems}>
+              <ChineseItems />
+              <ChineseItems />
+              <ChineseItems />
+              <ChineseItems />
+              <ChineseItems />
+              <ChineseItems />
+            </ScrollView>
           </View>
         </View>
       </View>
@@ -133,5 +138,16 @@ const styles = StyleSheet.create({
   fItems: {
     display: 'flex',
     flexDirection: 'row',
+  },
+  chText: {
+    fontSize: 18,
+    paddingTop: 10,
+    paddingBottom: 10,
+    fontWeight: 'semibold',
+    color: 'black',
+  },
+  chineseItems: {
+    display: 'flex',
+    flexDirection: 'column',
   },
 });

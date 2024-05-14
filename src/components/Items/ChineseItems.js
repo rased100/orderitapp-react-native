@@ -1,44 +1,56 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 
-const FeaturedItems = () => {
+const ChineseItems = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.imageCont}>
+      <View>
+        <Text style={styles.bText}>Briyani something</Text>
+        <Text style={styles.bText}>$14.00</Text>
+        <Text style={styles.sText}>Some notes about food</Text>
+      </View>
+      <View>
         <Image
           style={styles.image}
           source={require('../../assets/images/food.png')}
         />
+
         <View style={styles.plusCont}>
           <Text style={styles.plus}>+</Text>
         </View>
-      </View>
-      <View>
-        <Text style={styles.bText}>Briyani</Text>
-        <Text style={styles.bText}>$14.00</Text>
       </View>
     </View>
   );
 };
 
-export default FeaturedItems;
+export default ChineseItems;
 
 const styles = StyleSheet.create({
   container: {
-    paddingRight: 20,
+    // paddingRight: 20,
+    paddingBottom: 20,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  imageCont: {},
   image: {
     height: 65,
     width: 65,
   },
+  bText: {
+    color: 'black',
+  },
+  sText: {
+    color: '#9ba2a9',
+  },
+
   plusCont: {
     position: 'absolute',
-    bottom: 2,
-    right: 1,
+    top: '20%',
+    right: 2,
     backgroundColor: 'white',
-    height: 28,
-    width: 28,
+    height: 30,
+    width: 30,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -46,9 +58,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   plus: {
-    color: 'black',
-  },
-  bText: {
     color: 'black',
   },
 });

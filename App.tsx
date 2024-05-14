@@ -7,9 +7,18 @@
 
 import React from 'react';
 import Router from './src/router/Router';
+import {SafeAreaView} from 'react-native';
 
 function App(): JSX.Element {
-  return <Router />;
+  return (
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: 'white',
+      }}>
+      <Router />
+    </SafeAreaView>
+  );
 }
 
 export default App;

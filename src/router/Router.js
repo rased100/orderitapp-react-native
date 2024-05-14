@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from '../components/Auth/LoginScreen';
 import SignupScreen from '../components/Auth/SignupScreen';
 import {ScrollView, Text, View} from 'react-native';
+import Order from '../screen/Order';
 
 const Router = () => {
   const Stack = createNativeStackNavigator();
@@ -25,7 +26,8 @@ const Router = () => {
     <NavigationContainer>
       {/* <PublicRoutes /> */}
       {/* <LoginScreen /> */}
-      <SignupScreen />
+      {/* <SignupScreen /> */}
+      <Order />
     </NavigationContainer>
   );
 };
